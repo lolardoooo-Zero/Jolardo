@@ -1,0 +1,1 @@
+Place website photography and content images here (hero backgrounds, team photos, portfolio covers, etc). The site currently uses CSS gradient placeholders so it works with zero images out of the box.
