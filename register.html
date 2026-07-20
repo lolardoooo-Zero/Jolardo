@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create Account — Jolardo</title>
+<link rel="icon" href="assets/logo/jolardo-mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><img src="assets/logo/jolardo-wordmark.svg" alt="Jolardo" /></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</header>
+
+<main class="auth-shell">
+  <div class="auth-card reveal is-visible">
+    <div class="auth-logo"><img src="assets/logo/jolardo-wordmark.svg" alt="Jolardo" /></div>
+    <h1>Create Your Account</h1>
+    <p class="auth-sub">Join Jolardo to track projects, invoices, and reports.</p>
+
+    <form id="registerForm" novalidate>
+      <div class="form-group">
+        <label for="rFullName">Full Name</label>
+        <input type="text" id="rFullName" name="full_name" placeholder="Ahmed Mostafa" required />
+        <div class="form-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="rEmail">Email</label>
+        <input type="email" id="rEmail" name="email" placeholder="you@company.com" required />
+        <div class="form-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="rPhone">Phone</label>
+        <input type="text" id="rPhone" name="phone" placeholder="+20 1xx xxx xxxx" />
+        <div class="form-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="rPassword">Password</label>
+        <input type="password" id="rPassword" name="password" placeholder="••••••••" required />
+        <button type="button" class="pw-toggle" data-target="rPassword">Show</button>
+        <div class="pw-meter"><div class="pw-meter-fill"></div></div>
+        <ul class="pw-hint">
+          <li data-check="length">• At least 8 characters</li>
+          <li data-check="upper">• One uppercase letter</li>
+          <li data-check="lower">• One lowercase letter</li>
+          <li data-check="number">• One number</li>
+          <li data-check="symbol">• One symbol</li>
+        </ul>
+        <div class="form-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="rConfirm">Confirm Password</label>
+        <input type="password" id="rConfirm" name="confirm_password" placeholder="••••••••" required />
+        <div class="form-error"></div>
+      </div>
+      <div class="form-group" style="margin-bottom:26px;">
+        <label class="remember-check"><input type="checkbox" id="rTerms" /> I agree to the Terms of Service and Privacy Policy</label>
+        <div class="form-error"></div>
+      </div>
+      <button type="submit" id="rSubmit" class="btn btn-gold auth-submit">Create Account</button>
+
+      <div class="verify-banner" id="verifyBanner">
+        We've sent a verification link to your email. Please verify your address before signing in.
+      </div>
+    </form>
+
+    <div class="auth-switch">Already have an account? <a href="login.html" class="link-gold">Sign in</a></div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

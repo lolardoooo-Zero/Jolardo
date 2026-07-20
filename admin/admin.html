@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-header">
+            <h1>Admin Panel</h1>
+            <p>Manage services, pricing, and incoming orders</p>
+        </header>
+
+        <div id="alertBox" class="alert"></div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="services">Services</button>
+            <button class="tab-btn" data-tab="settings">Fee & Settings</button>
+            <button class="tab-btn" data-tab="orders">Orders</button>
+        </div>
+
+        <!-- Services Tab -->
+        <div class="tab-content active" id="tab-services">
+            <div class="card">
+                <h2 id="formTitle">Add New Service</h2>
+                <form id="serviceForm">
+                    <input type="hidden" id="serviceId">
+                    <div class="form-group">
+                        <label for="sName">Service Name</label>
+                        <input type="text" id="sName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sDesc">Description</label>
+                        <textarea id="sDesc" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="sPrice">Monthly Price ($)</label>
+                            <input type="number" id="sPrice" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sActive">Status</label>
+                            <select id="sActive" style="width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-family:inherit;font-size:15px;">
+                                <option value="true">Active</option>
+                                <option value="false">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn" id="saveServiceBtn">Save Service</button>
+                        <button type="button" class="btn secondary" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>All Services</h2>
+                <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesTableBody">
+                        <tr><td colspan="5" class="empty-state">Loading...</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="tab-settings">
+            <div class="card">
+                <h2>Additional Fee Percentage</h2>
+                <p style="color:var(--muted);font-size:14px;margin-top:-10px;">
+                    This percentage is added on top of the selected services' subtotal to calculate the customer's final monthly total.
+                </p>
+                <form id="settingsForm">
+                    <div class="form-group">
+                        <label for="percentageInput">Percentage (%)</label>
+                        <input type="number" id="percentageInput" step="0.01" min="0" required>
+                    </div>
+                    <button type="submit" class="btn">Save Percentage</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Orders Tab -->
+        <div class="tab-content" id="tab-orders">
+            <div class="card">
+                <h2>Incoming Orders</h2>
+                <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Mobile</th>
+                            <th>Services</th>
+                            <th>Total Monthly</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <tr><td colspan="7" class="empty-state">Loading...</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="top-link">Back to Subscription Page</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

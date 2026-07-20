@@ -1,0 +1,75 @@
+/* ==========================================================================
+   JOLARDO — Auth pages (login / register) styles
+   ========================================================================== */
+
+.auth-shell{
+  min-height: 100vh; display:flex; align-items:center; justify-content:center; padding: 140px 24px 60px;
+  background:
+    radial-gradient(ellipse 800px 500px at 20% 10%, rgba(212,175,55,0.12), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 80% 90%, rgba(212,175,55,0.07), transparent 60%),
+    var(--jl-black);
+}
+.auth-card{
+  width: 100%; max-width: 460px; padding: 46px 44px; border-radius: var(--radius-lg);
+  background: var(--jl-panel); border: 1px solid var(--jl-line);
+  box-shadow: 0 50px 100px -40px rgba(0,0,0,0.7);
+}
+.auth-logo{ display:flex; justify-content:center; margin-bottom: 26px; }
+.auth-logo img{ height: 40px; }
+.auth-card h1{ font-size: 30px; text-align:center; }
+.auth-sub{ text-align:center; color: var(--jl-ivory-dim); font-size:14px; margin: 10px 0 30px; }
+
+.form-group{ margin-bottom: 20px; position:relative; }
+.form-group label{ display:block; font-size:12.5px; letter-spacing:.5px; text-transform:uppercase; color: var(--jl-muted); margin-bottom:8px; }
+.form-group input{
+  width:100%; padding: 14px 16px; border-radius: var(--radius-sm);   background: rgba(212,175,55,0.04);
+  border: 1px solid var(--jl-line); color: var(--jl-ivory); font-family: var(--font-body); font-size:14.5px;
+  transition: border-color .3s ease, background .3s ease;
+}
+.form-group input:focus{ border-color: var(--jl-gold); background: rgba(212,175,55,0.07); outline:none; }
+.form-error{ font-size:12.5px; color:#e2938e; margin-top:6px; min-height:14px; }
+.pw-toggle{
+  position:absolute; right:14px; top: 39px; background:none; border:none; color: var(--jl-muted); font-size:12px;
+  letter-spacing:.4px; text-transform:uppercase;
+}
+
+.pw-meter{ height:4px; border-radius:4px; background: var(--jl-line); margin-top:10px; overflow:hidden; }
+.pw-meter-fill{ height:100%; width:0%; background: var(--jl-gradient-gold); transition: width .3s ease, background .3s ease; }
+.pw-hint{ font-size:12px; color: var(--jl-muted); margin-top:8px; line-height:1.6; }
+.pw-hint li{ display:flex; gap:6px; align-items:center; }
+.pw-hint li.ok{ color: #8fbf8f; }
+
+.form-row-inline{ display:flex; align-items:center; justify-content:space-between; margin: -6px 0 22px; }
+.remember-check{ display:flex; align-items:center; gap:8px; font-size:13px; color: var(--jl-ivory-dim); }
+.remember-check input{ width:16px; height:16px; accent-color: var(--jl-gold); }
+.link-gold{ color: var(--jl-gold-light); font-size:13px; }
+.link-gold:hover{ text-decoration: underline; }
+
+.auth-submit{ width:100%; justify-content:center; }
+.auth-switch{ text-align:center; margin-top: 26px; font-size:14px; color: var(--jl-ivory-dim); }
+
+.auth-divider{ display:flex; align-items:center; gap:14px; margin: 26px 0; color: var(--jl-muted); font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+.auth-divider::before, .auth-divider::after{ content:""; flex:1; height:1px; background: var(--jl-line); }
+
+/* Modal (forgot password) */
+.jl-modal-backdrop{
+  position:fixed; inset:0; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px); z-index: 1000;
+  display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition: opacity .3s ease;
+}
+.jl-modal-backdrop.is-open{ opacity:1; pointer-events:auto; }
+.jl-modal{
+  width: 100%; max-width: 420px; margin: 20px; padding: 36px; border-radius: var(--radius-lg);
+  background: var(--jl-panel); border:1px solid var(--jl-line-strong);
+  transform: translateY(20px) scale(.98); transition: transform .35s var(--ease-lux);
+}
+.jl-modal-backdrop.is-open .jl-modal{ transform:none; }
+.jl-modal h3{ font-size:22px; margin-bottom:10px; }
+.jl-modal p{ color: var(--jl-ivory-dim); font-size:14px; margin-bottom: 22px; }
+.jl-modal-close{ position:absolute; top:20px; right:24px; background:none; border:none; color: var(--jl-muted); font-size:20px; }
+
+/* Email verification banner */
+.verify-banner{
+  margin-top: 18px; padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--jl-line-strong);
+  background: rgba(212,175,55,0.1); font-size:13px; color: var(--jl-ivory-dim); display:none;
+}
+.verify-banner.is-visible{ display:block; }

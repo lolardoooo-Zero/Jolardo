@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" style="visibility:hidden;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Dashboard — Jolardo</title>
+<link rel="icon" href="assets/logo/jolardo-mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<header class="navbar navbar-dash">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><img src="assets/logo/jolardo-wordmark.svg" alt="Jolardo" /></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="user-greeting" id="userGreetingName">...</span>
+      <button class="btn btn-ghost btn-sm" id="signOutBtn" type="button">Sign Out</button>
+    </div>
+  </div>
+</header>
+
+<main class="dash-shell">
+  <div class="container">
+    
+    <!-- Welcome Header -->
+    <header class="dash-welcome">
+      <span class="eyebrow">Client Workspace</span>
+      <h1 class="dash-title">Welcome to your <span class="gold-text">branding</span> portal</h1>
+      <p class="dash-subtitle">Track your creative timeline, review progress milestones, and manage your account credentials.</p>
+    </header>
+
+    <!-- Empty State Container -->
+    <div class="dash-empty-state" id="dashEmptyState" style="display:none;">
+      <div class="empty-glow-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2" stroke="var(--jl-gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Preparing Onboarding</h3>
+        <p>Your creative branding project will appear here as soon as our directors assign it to your account. We are currently finalizing your creative brief. If you have any immediate inquiries, please reach out to us.</p>
+        <a href="contact.html" class="btn btn-gold btn-sm" style="margin-top:12px;">Contact Director</a>
+      </div>
+    </div>
+
+    <!-- Active Dashboard Workspace -->
+    <div class="dash-workspace-grid" id="dashWorkspace" style="display:none;">
+      
+      <!-- LEFT COLUMN: Timeline & Progress Tracking -->
+      <div class="dash-col-main">
+        <div class="dash-panel tracker-panel">
+          <div class="tracker-header">
+            <div>
+              <span class="panel-eyebrow" id="projClientBrand">BRAND IDENTITY</span>
+              <h2 id="projNameTitle">Loading Project...</h2>
+            </div>
+            <div class="progress-bubble">
+              <span id="projProgressPct">0%</span>
+              <label>Complete</label>
+            </div>
+          </div>
+
+          <!-- Linear Progress bar -->
+          <div class="tracker-progress-track">
+            <div class="tracker-progress-fill" id="projProgressFill" style="width: 0%;"></div>
+          </div>
+
+          <!-- Elegant Steps Timeline -->
+          <div class="timeline-stepper">
+            <div class="timeline-step" data-phase-step="Briefing">
+              <div class="step-dot">1</div>
+              <div class="step-label">
+                <b>Briefing</b>
+                <span>Initial creative request</span>
+              </div>
+            </div>
+            <div class="timeline-step" data-phase-step="Research &amp; Moodboard">
+              <div class="step-dot">2</div>
+              <div class="step-label">
+                <b>Research &amp; Moodboard</b>
+                <span>Market study &amp; style curation</span>
+              </div>
+            </div>
+            <div class="timeline-step" data-phase-step="Concept Design">
+              <div class="step-dot">3</div>
+              <div class="step-label">
+                <b>Concept Design</b>
+                <span>Logo &amp; visual system drafting</span>
+              </div>
+            </div>
+            <div class="timeline-step" data-phase-step="Revisions">
+              <div class="step-dot">4</div>
+              <div class="step-label">
+                <b>Revisions &amp; Refinement</b>
+                <span>Collaterals &amp; revisions feedback</span>
+              </div>
+            </div>
+            <div class="timeline-step" data-phase-step="Handover">
+              <div class="step-dot">5</div>
+              <div class="step-label">
+                <b>Final Handover</b>
+                <span>Source asset packages delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest status updates from admin -->
+        <div class="dash-panel status-notes-panel">
+          <div class="panel-head">
+            <h3>Director's Progress Log</h3>
+            <span class="status-badge" id="projStatusLabel">In Progress</span>
+          </div>
+          <p id="projStatusNotesText">Our directors are finalizing the visual brief.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Project Specs & Account Settings -->
+      <div class="dash-col-side">
+        <!-- Specs Panel -->
+        <div class="dash-panel specs-panel">
+          <h3>Project Specification</h3>
+          <ul class="specs-list">
+            <li>
+              <span>Allocated Budget</span>
+              <strong id="specBudget">EGP 0</strong>
+            </li>
+            <li>
+              <span>Commenced Date</span>
+              <strong id="specStarted">Loading...</strong>
+            </li>
+            <li>
+              <span>Estimated Delivery</span>
+              <strong id="specDue">Loading...</strong>
+            </li>
+            <li>
+              <span>Primary Sector</span>
+              <strong>Luxury Apparel</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Account Settings Panel -->
+        <div class="dash-panel settings-panel">
+          <h3>Account Settings</h3>
+          
+          <!-- Profile info form -->
+          <form id="profileForm">
+            <div class="form-group">
+              <label for="pName">Full Name</label>
+              <input type="text" id="pName" name="full_name" required />
+            </div>
+            <div class="form-group">
+              <label for="pPhone">Phone Number</label>
+              <input type="text" id="pPhone" name="phone" />
+            </div>
+            <button type="submit" class="btn btn-ghost btn-sm" style="width:100%;">Update Details</button>
+          </form>
+
+          <div style="margin:20px 0; border-top:1px solid var(--jl-line);"></div>
+
+          <!-- Password change form -->
+          <form id="passwordForm">
+            <div class="form-group">
+              <label for="pPassword">New Password</label>
+              <input type="password" id="pPassword" name="new_password" placeholder="••••••••" required />
+            </div>
+            <div class="form-group">
+              <label for="pConfirm">Confirm Password</label>
+              <input type="password" id="pConfirm" name="confirm_password" placeholder="••••••••" required />
+            </div>
+            <button type="submit" class="btn btn-gold btn-sm" style="width:100%;">Change Password</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

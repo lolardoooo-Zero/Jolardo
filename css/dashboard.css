@@ -1,0 +1,274 @@
+/* ==========================================================================
+   JOLARDO — Client Dashboard Stylesheet
+    obsidian black / ivory / satin gold — luxury workspace theme.
+   ========================================================================== */
+
+.navbar-dash {
+  border-bottom: 1px solid var(--jl-line);
+  background: var(--jl-black-soft);
+}
+.user-greeting {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--jl-gold-light);
+  margin-right: 14px;
+}
+
+.dash-shell {
+  padding: 130px 0 80px;
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse 900px 600px at 10% 5%, rgba(212,175,55,0.1), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 90% 85%, rgba(212,175,55,0.07), transparent 60%),
+    var(--jl-black);
+}
+
+/* Dashboard Header */
+.dash-welcome {
+  margin-bottom: 46px;
+}
+.dash-title {
+  font-size: clamp(32px, 3.5vw, 46px);
+  margin: 10px 0 12px;
+  line-height: 1.15;
+}
+.dash-subtitle {
+  color: var(--jl-ivory-dim);
+  max-width: 680px;
+  font-size: 15px;
+}
+
+/* Luxury Empty State */
+.dash-empty-state {
+  margin-top: 24px;
+  animation: dashFadeIn 0.5s var(--ease-lux) forwards;
+}
+.empty-glow-box {
+  padding: 60px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--jl-panel);
+  border: 1px solid var(--jl-line-strong);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  position: relative;
+  overflow: hidden;
+}
+.empty-glow-box::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.empty-glow-box svg {
+  width: 64px; height: 64px; margin-bottom: 24px;
+}
+.empty-glow-box h3 {
+  font-size: 24px; font-weight: 600; margin-bottom: 12px;
+}
+.empty-glow-box p {
+  font-size: 14.5px; color: var(--jl-ivory-dim); line-height: 1.6; max-width: 480px; margin: 0 auto;
+}
+
+/* Grid Layout */
+.dash-workspace-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+  animation: dashFadeIn 0.5s var(--ease-lux) forwards;
+}
+
+.dash-panel {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  background: var(--jl-panel);
+  border: 1px solid var(--jl-line);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+  margin-bottom: 32px;
+}
+.dash-panel h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--jl-line);
+  padding-bottom: 12px;
+  color: var(--jl-ivory);
+}
+
+/* Progress Tracker Panel */
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.panel-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--jl-gold-light);
+  display: block;
+  margin-bottom: 6px;
+}
+.tracker-header h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+.progress-bubble {
+  text-align: right;
+  flex-shrink: 0;
+}
+.progress-bubble span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--jl-gold-light);
+  line-height: 1;
+}
+.progress-bubble label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--jl-muted);
+}
+
+/* Progress Bar */
+.tracker-progress-track {
+  height: 6px;
+  border-radius: 6px;
+  background: var(--jl-black);
+  margin-bottom: 38px;
+  overflow: hidden;
+}
+.tracker-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: var(--jl-gradient-gold);
+  transition: width 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+/* Stepper Timeline */
+.timeline-stepper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.timeline-stepper::before {
+  content: "";
+  position: absolute;
+  top: 14px; bottom: 14px; left: 15px;
+  width: 1px;
+  background: var(--jl-line);
+  z-index: 1;
+}
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+.step-dot {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--jl-black-soft);
+  border: 1px solid var(--jl-line-strong);
+  color: var(--jl-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; font-family: var(--font-mono);
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+.step-label {
+  display: flex; flex-direction: column;
+}
+.step-label b {
+  font-size: 15px; color: var(--jl-muted); transition: color 0.4s ease;
+}
+.step-label span {
+  font-size: 12.5px; color: var(--jl-muted); transition: color 0.4s ease;
+}
+
+/* Active and Completed Stepper States */
+.timeline-step.completed .step-dot {
+  background: var(--jl-gradient-gold);
+  border-color: transparent;
+  color: #0a0800;
+}
+.timeline-step.completed .step-label b {
+  color: var(--jl-ivory);
+}
+.timeline-step.completed .step-label span {
+  color: var(--jl-ivory-dim);
+}
+
+.timeline-step.active .step-dot {
+  border-color: var(--jl-gold);
+  background: var(--jl-black-soft);
+  color: var(--jl-gold-light);
+  box-shadow: 0 0 12px rgba(212,175,55,0.4);
+}
+.timeline-step.active .step-label b {
+  color: var(--jl-gold-light);
+}
+.timeline-step.active .step-label span {
+  color: var(--jl-ivory-dim);
+}
+
+/* Director's Progress Notes */
+.status-notes-panel .panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.status-notes-panel h3 {
+  border: none; margin: 0; padding: 0; font-size: 17px;
+}
+.status-badge {
+  padding: 4px 12px; border-radius: 20px; font-size: 11px;
+  background: rgba(212,175,55,0.12); color: var(--jl-gold-light);
+  text-transform: uppercase; font-family: var(--font-mono);
+  border: 1px solid var(--jl-line);
+}
+#projStatusNotesText {
+  font-size: 14.5px; color: var(--jl-ivory-dim); line-height: 1.6; margin: 0;
+  font-style: italic; background: rgba(212,175,55,0.03);
+  padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid var(--jl-line);
+}
+
+/* Specs Panel */
+.specs-list {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.specs-list li {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 14px;
+}
+.specs-list li span {
+  color: var(--jl-muted);
+}
+.specs-list li strong {
+  color: var(--jl-ivory); font-weight: 500;
+}
+#specBudget {
+  color: var(--jl-gold-light);
+}
+
+/* Animations */
+@keyframes dashFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 991px) {
+  .dash-workspace-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

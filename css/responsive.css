@@ -1,0 +1,54 @@
+/* ==========================================================================
+   JOLARDO — Responsive rules (shared across all public pages)
+   Breakpoints: 1200 desktop / 1024 laptop / 768 tablet / 480 mobile
+   ========================================================================== */
+
+@media (max-width: 1200px){
+  .container{ padding: 0 26px; }
+  .hero-grid{ gap: 40px; }
+}
+
+@media (max-width: 1024px){
+  .services-grid, .portfolio-grid, .testi-track{ grid-template-columns: repeat(2,1fr); }
+  .stats-grid{ grid-template-columns: repeat(2,1fr); }
+  .why{ grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid{ grid-template-columns: 1fr 1fr; gap: 36px; }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-visual{ height: 340px; order:-1; }
+  .team-grid, .value-grid, .goal-grid{ grid-template-columns: repeat(2,1fr) !important; }
+}
+
+@media (max-width: 860px){
+  .nav-links{
+    position: fixed; top: var(--nav-h); left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.98); backdrop-filter: blur(20px);
+    flex-direction: column; justify-content:flex-start; padding: 40px 32px;
+    gap: 26px; transform: translateX(100%); transition: transform .5s var(--ease-lux);
+  }
+  .nav-links.is-open{ transform: translateX(0); }
+  .nav-links a{ font-size: 20px; }
+  .nav-toggle{ display:block; }
+  .nav-actions .btn-ghost{ display:none; }
+}
+
+@media (max-width: 768px){
+  .section{ padding: 80px 0; }
+  .section-head{ margin-bottom: 36px; }
+  .services-grid, .portfolio-grid, .testi-track, .stats-grid{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+  .contact-grid{ grid-template-columns: 1fr !important; }
+  .cta-section{ padding: 50px 24px; }
+  .timeline{ padding-left: 20px !important; }
+  .auth-card{ padding: 34px 24px !important; }
+}
+
+@media (max-width: 480px){
+  .hero-title{ font-size: 38px; }
+  .hero-cta{ flex-direction:column; align-items:stretch; }
+  .hero-cta .btn{ width:100%; }
+  .hero-stats{ flex-wrap:wrap; gap:24px; }
+  .section-title{ font-size: 28px; }
+  .why-panel{ padding: 26px; }
+  .service-card{ padding: 28px 22px; }
+}

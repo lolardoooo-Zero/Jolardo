@@ -1,0 +1,47 @@
+/* ==========================================================================
+   JOLARDO — Contact page styles
+   ========================================================================== */
+
+.contact-grid{ display:grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items:start; }
+
+.contact-info-card{
+  padding: 34px; border-radius: var(--radius-md); background: var(--jl-panel); border:1px solid var(--jl-line);
+  margin-bottom: 18px; display:flex; gap:18px; align-items:flex-start;
+}
+.contact-info-card .icon{
+  width:46px; height:46px; border-radius:12px; background: rgba(212,175,55,0.1); border:1px solid var(--jl-line);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.contact-info-card .icon svg{ width:20px; height:20px; stroke: var(--jl-gold-light); }
+.contact-info-card h4{ font-size:16px; margin-bottom:6px; }
+.contact-info-card p, .contact-info-card a{ color: var(--jl-ivory-dim); font-size:14px; }
+
+.hours-list{ margin-top:8px; }
+.hours-list li{ display:flex; justify-content:space-between; font-size:13.5px; color: var(--jl-ivory-dim); padding:6px 0; border-bottom: 1px solid var(--jl-line); }
+.hours-list li:last-child{ border-bottom:none; }
+.hours-list span:last-child{ color: var(--jl-gold-light); }
+
+.map-frame{
+  border-radius: var(--radius-md); overflow:hidden; border:1px solid var(--jl-line); margin-top: 24px; height: 220px;
+  filter: grayscale(0.4) invert(0.92) contrast(0.9);
+}
+.map-frame iframe{ width:100%; height:100%; border:0; }
+
+.contact-form-panel{
+  padding: 40px; border-radius: var(--radius-lg); background: var(--jl-panel); border:1px solid var(--jl-line);
+}
+.form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group{ margin-bottom: 22px; }
+.form-group label{ display:block; font-size:12.5px; letter-spacing:.5px; text-transform:uppercase; color: var(--jl-muted); margin-bottom:8px; }
+.form-group input, .form-group textarea, .form-group select{
+  width:100%; padding: 14px 16px; border-radius: var(--radius-sm); background: rgba(212,175,55,0.04);
+  border: 1px solid var(--jl-line); color: var(--jl-ivory); font-family: var(--font-body); font-size:14.5px;
+  transition: border-color .3s ease, background .3s ease;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus{
+  border-color: var(--jl-gold); background: rgba(212,175,55,0.07); outline:none;
+}
+.form-group textarea{ min-height: 130px; resize: vertical; }
+.form-error{ font-size:12.5px; color:#e2938e; margin-top:6px; min-height:14px; }
+.form-submit{ width:100%; justify-content:center; }
+.social-inline{ display:flex; gap:12px; margin-top:20px; }

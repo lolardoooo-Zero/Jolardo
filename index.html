@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jolardo — Marketing Built to Outlast Trends</title>
+<meta name="description" content="Jolardo" />
+
+<link rel="icon" href="assets/logo/jolardo-mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><img src="assets/logo/jolardo-wordmark.svg" alt="Jolardo" /></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+      <a href="register.html" class="btn btn-gold btn-sm">Get Started</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Marketing Company · Cairo, Egypt</span>
+      <h1 class="hero-title">Brands that <span class="gold-text">compound</span>,<br>not campaigns that <em>expire</em>.</h1>
+      <p class="hero-desc">Jolardo designs growth systems for ambitious Egyptian businesses — brand strategy, performance media, and creative production under one senior team.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-gold">Book a Strategy Call</a>
+        
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-count="180" data-suffix="+">0</b><span>Brands Grown</span></div>
+        <div class="stat"><b data-count="42" data-suffix="M">0</b><span>EGP Managed Ad Spend</span></div>
+        <div class="stat"><b data-count="96" data-suffix="%">0</b><span>Client Retention</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <span class="orbit" style="width:120%;height:120%;top:-10%;left:-10%;"></span>
+      <div class="growth-card">
+        <span class="glabel">Portfolio Performance — Rolling 12mo</span>
+        <svg viewBox="0 0 400 260" width="100%" height="220" style="margin-top:20px;">
+          <line x1="0" y1="220" x2="400" y2="220" stroke="var(--jl-line)" stroke-width="1"/>
+          <line x1="0" y1="150" x2="400" y2="150" stroke="var(--jl-line)" stroke-width="1"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="var(--jl-line)" stroke-width="1"/>
+          <path class="growth-line-path" d="M10 200 L70 190 L120 160 L170 175 L220 110 L270 120 L320 60 L390 30"
+                fill="none" stroke="url(#heroGoldStroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle class="growth-dot" cx="390" cy="30" r="6" fill="#f0d78c"/>
+          <defs>
+            <linearGradient id="heroGoldStroke" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#9a7b1a"/>
+              <stop offset="100%" stop-color="#f0d78c"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div style="display:flex;justify-content:space-between;margin-top:16px;">
+          <div><div class="glabel">Avg. Growth</div><h3 style="color:var(--jl-gold-light);font-size:26px;">+312%</h3></div>
+          <div><div class="glabel">Sector</div><h3 style="font-size:26px;">Multi-Vertical</h3></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="justify-content:center;">What We Do</span>
+      <h2 class="section-title">Every discipline a growing brand needs</h2>
+      <p class="section-sub">From first brand line to full-funnel performance media — one accountable team, no agency hand-offs.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <span class="service-index">01</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 19V5a1 1 0 0 1 1-1h9l5 5v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M14 4v5h5"/></svg></div>
+        <h3>Brand Strategy</h3>
+        <p>Positioning, identity systems, and messaging architecture built on real market research, not templates.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-index">02</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg></div>
+        <h3>Performance Marketing</h3>
+        <p>Paid social, search, and programmatic media managed against revenue targets — reported in EGP, weekly.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-index">03</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 16h5M8 8h8"/></svg></div>
+        <h3>Content &amp; Production</h3>
+        <p>Photography, video, and copy produced in-house for consistent quality across every channel.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-index">04</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>Editorial calendars, community management, and always-on reporting for every platform that matters.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-index">05</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
+        <h3>Analytics &amp; Reporting</h3>
+        <p>Custom dashboards that connect ad spend directly to pipeline and revenue outcomes.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-index">06</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></div>
+        <h3>Web &amp; Digital Experience</h3>
+        <p>High-conversion websites and landing systems engineered to turn attention into pipeline.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section">
+  <div class="container why">
+    <div class="reveal">
+      <span class="eyebrow">Why Jolardo</span>
+      <h2 class="section-title">Senior team.<br>Transparent numbers.<br>No agency theatre.</h2>
+      <div class="why-list">
+        <div class="why-item"><span class="why-num">01</span><div><h4>Fixed, transparent pricing</h4><p>Every retainer quoted in EGP with no hidden production markups.</p></div></div>
+        <div class="why-item"><span class="why-num">02</span><div><h4>You work with seniors, always</h4><p>No handing your account to a junior after the pitch — the strategists stay on.</p></div></div>
+        <div class="why-item"><span class="why-num">03</span><div><h4>Revenue-first reporting</h4><p>We report pipeline and revenue impact, not vanity impressions.</p></div></div>
+      </div>
+    </div>
+    <div class="why-panel reveal">
+      <span class="orbit" style="width:220px;height:220px;top:-60px;right:-60px;"></span>
+      <p class="quote">"Jolardo rebuilt our entire acquisition funnel in eleven weeks. Our cost per lead dropped 41% and never crept back up."</p>
+      <div class="quote-by">— Marketing Director, Retail Group</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat-card reveal"><b data-count="180" data-suffix="+">0</b><span>Brands Served</span></div>
+    <div class="stat-card reveal"><b data-count="312" data-suffix="%">0</b><span>Avg. Growth Delivered</span></div>
+    <div class="stat-card reveal"><b data-count="42" data-suffix="M">0</b><span>EGP Ad Spend Managed</span></div>
+    <div class="stat-card reveal"><b data-count="9" data-suffix="">0</b><span>Years in Business</span></div>
+  </div>
+</section>
+
+
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="justify-content:center;">Client Voices</span>
+      <h2 class="section-title">Trusted by teams who measure everything</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"The most transparent agency relationship we've had. Every EGP of spend is accounted for in the monthly report."</p>
+        <div class="testi-person"><div class="testi-avatar">S</div><div><b>Sara ElGendy</b><span>CMO, Retail Group</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Jolardo's creative team understands Egyptian audiences better than any agency we've hired before."</p>
+        <div class="testi-person"><div class="testi-avatar">K</div><div><b>Karim Fathy</b><span>Founder, Rasid Pay</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"We doubled our qualified pipeline in one quarter without increasing our media budget."</p>
+        <div class="testi-person"><div class="testi-avatar">D</div><div><b>Dina Mostafa</b><span>Head of Growth, Marasi Resorts</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <span class="eyebrow" style="justify-content:center;">Let's Build</span>
+      <h2>Ready to grow with a team that shows its work?</h2>
+      <p>Tell us about your brand and goals — we'll come back with a growth plan, not a generic proposal.</p>
+      <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo/jolardo-wordmark.svg" alt="Jolardo" style="height:28px;">
+      <p>A full-service marketing company building brands and growth systems across Egypt.</p>
+      <div class="social-row" style="margin-top:22px;">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 13v4"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="m4 4 16 16M20 4 4 20"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul><li><a href="about.html">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#portfolio">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h5>Account</h5>
+      <ul><li><a href="login.html">Login</a></li><li><a href="register.html">Register</a></li></ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li><a href="tel:+20100000000">+20 100 000 0000</a></li><li><a href="mailto:hello@jolardo.com">hello@jolardo.com</a></li><li>Cairo, Egypt</li></ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Jolardo Marketing. All rights reserved.</span>
+    <span>Built with care in Cairo</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

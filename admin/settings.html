@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" style="visibility:hidden;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings — Jolardo Admin</title>
+<link rel="icon" href="../assets/logo/jolardo-mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+<div class="admin-shell">
+
+  <aside class="a-sidebar">
+    <div class="a-brand">
+      <img src="../assets/logo/jolardo-wordmark.svg" alt="Jolardo" style="height:24px;">
+      <button class="a-sidebar-close" aria-label="Close menu">×</button>
+    </div>
+    <nav class="a-nav">
+      <span class="a-nav-label">Overview</span>
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+      <a href="projects.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Projects</a>
+      <span class="a-nav-label">Accounting</span>
+      <a href="accounting.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Financial Control</a>
+      <a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 19V5a1 1 0 0 1 1-1h9l5 5v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M14 4v5h5M8 13h8M8 17h5"/></svg>Reports</a>
+      <span class="a-nav-label">Management</span>
+      <a href="users.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 19a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="8.5" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 4.5"/></svg>Users</a>
+      <a href="messages.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages <span class="a-nav-badge" data-msg-badge style="display:none;">0</span></a>
+      <a href="applications.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Applications</a>
+      <a href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+    </nav>
+    <div class="a-sidebar-foot">
+      <div class="a-user-chip"><div class="a-user-avatar" data-admin-initial>A</div><div><b data-admin-name>Admin</b><span data-admin-role>admin</span></div></div>
+      <a href="#" data-sign-out class="a-btn a-btn-sm" style="width:100%; justify-content:center; margin-top:12px;">Sign Out</a>
+    </div>
+  </aside>
+
+  <div class="a-main">
+    <header class="a-topbar">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <button class="a-icon-btn a-sidebar-toggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <h1>Settings</h1>
+      </div>
+      <div class="a-topbar-actions">
+        <button class="a-icon-btn" id="themeToggle" aria-label="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="4"/></svg></button>
+      </div>
+    </header>
+
+    <main class="a-content" style="max-width:760px;">
+      <div class="a-panel" style="margin-bottom:22px;">
+        <div class="a-panel-head"><h2>Profile</h2></div>
+        <form id="settingsProfileForm">
+          <div class="a-form-row">
+            <div class="a-form-group"><label for="sFullName">Full Name</label><input type="text" id="sFullName" name="full_name" required /></div>
+            <div class="a-form-group"><label for="sEmail">Email</label><input type="email" id="sEmail" name="email" disabled /></div>
+          </div>
+          <div class="a-form-group"><label for="sPhone">Phone</label><input type="text" id="sPhone" name="phone" /></div>
+          <button type="submit" class="a-btn a-btn-gold">Save Profile</button>
+        </form>
+      </div>
+
+      <div class="a-panel" style="margin-bottom:22px;">
+        <div class="a-panel-head"><h2>Security</h2></div>
+        <form id="settingsPasswordForm">
+          <div class="a-form-row">
+            <div class="a-form-group"><label for="sNewPassword">New Password</label><input type="password" id="sNewPassword" name="new_password" minlength="8" required /></div>
+            <div class="a-form-group"><label for="sConfirmPassword">Confirm New Password</label><input type="password" id="sConfirmPassword" name="confirm_password" minlength="8" required /></div>
+          </div>
+          <button type="submit" class="a-btn a-btn-gold">Update Password</button>
+        </form>
+      </div>
+
+      <div class="a-panel">
+        <div class="a-panel-head"><h2>Notification Preferences</h2></div>
+        <form id="settingsNotifForm">
+          <div class="a-form-group" style="display:flex; align-items:center; gap:10px;"><input type="checkbox" id="notifLogin" checked style="width:auto;"><label for="notifLogin" style="margin:0; text-transform:none;">Login alerts</label></div>
+          <div class="a-form-group" style="display:flex; align-items:center; gap:10px;"><input type="checkbox" id="notifFinancial" checked style="width:auto;"><label for="notifFinancial" style="margin:0; text-transform:none;">Financial alerts (income / expense / transactions)</label></div>
+          <div class="a-form-group" style="display:flex; align-items:center; gap:10px;"><input type="checkbox" id="notifSystem" checked style="width:auto;"><label for="notifSystem" style="margin:0; text-transform:none;">System notifications</label></div>
+          <button type="submit" class="a-btn a-btn-gold">Save Preferences</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>
